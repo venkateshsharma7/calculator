@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* General body styling */
+        body {
+            background-color: #f5f5f5; /* Light gray background */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height */
+            margin: 0;
+        }
+
+        /* Calculator container styling */
+        .calculator {
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #000000; /* Black calculator body */
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+            width: 400px; /* Fixed width */
+        }
+
+        /* Display screen styling */
+        .display {
+            background-color: #222; /* Dark gray background for display */
+            color: white; /* White text */
+            font-size: 2em; /* Large font size */
+            padding: 10px;
+            text-align: right; /* Align numbers to the right */
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Button container layout */
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* General button styling */
+        button {
+            margin: 5px;
+            width: 70px;
+            height: 60px;
+            font-size: 1.5em; /* Bigger font for readability */
+        }
+
+        /* Light buttons (number buttons) */
+        button.btn-light {
+            background-color: #f7f7f7;
+        }
+
+        /* Backspace button with red color */
+        #backspace {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        /* Container to center calculator */
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main container for calculator -->
+    <div class="container">
+        <div class="calculator">
+            <!-- Display screen -->
+            <div class="display" id="display">0</div>
+
+            <!-- Calculator buttons -->
+            <div class="buttons">
+                <button class="btn btn-danger" id="clear">AC</button> <!-- Clear button -->
+                <button class="btn btn-secondary" id="modulo">%</button> <!-- Modulo operator -->
+                <button class="btn btn-danger" id="backspace">←</button> <!-- Backspace button -->
+                <button class="btn btn-warning" id="divide">/</button> <!-- Division operator -->
+
+                <!-- Number buttons and operators -->
+                <button class="btn btn-light" id="seven">7</button>
+                <button class="btn btn-light" id="eight">8</button>
+                <button class="btn btn-light" id="nine">9</button>
+                <button class="btn btn-warning" id="multiply">*</button> <!-- Multiplication operator -->
+
+                <button class="btn btn-light" id="four">4</button>
+                <button class="btn btn-light" id="five">5</button>
+                <button class="btn btn-light" id="six">6</button>
+                <button class="btn btn-warning" id="subtract">-</button> <!-- Subtraction operator -->
+
+                <button class="btn btn-light" id="one">1</button>
+                <button class="btn btn-light" id="two">2</button>
+                <button class="btn btn-light" id="three">3</button>
+                <button class="btn btn-warning" id="add">+</button> <!-- Addition operator -->
+
+                <button class="btn btn-light" id="zero">00</button> <!-- Double zero button -->
+                <button class="btn btn-light" id="zero">0</button> <!-- Single zero button -->
+                <button class="btn btn-light" id="decimal">.</button> <!-- Decimal point -->
+                <button class="btn btn-success" id="equal">=</button> <!-- Equals button -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript file for calculator functionality -->
+    <script src="calculator.js"></script>
+</body>
+</html>
